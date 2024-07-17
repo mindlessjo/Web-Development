@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Card Picker</title>
+  <script defer src="../scripts/script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link
+    href="https://api.fontshare.com/v2/css?f[]=general-sans@200,201,300,301,400,401,500,501,600,601,700,701,1,2&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="workspace">
+    <div id="workarea">
+      <div id="info-button"></div>
+      <h1 class="header-text" id="header-text">Ping Pong Picker</h1>
+      <div id="info-text-container">
+        <h3 id="info-text" class="info-text">
+          <br /><br />The objective of the game is to choose a ping pong on
+          your side, correctly guessing the reflecting ping pong your opponent
+          has chosen. Try to get as high of a score as possible.<br /><br />
+          Press the "Enter" button to submit your choice, while the "Restart"
+          button resets the game.
+        </h3>
+      </div>
+
+      <section id="ping-space">
+        <p class="side-text" id="opponent-header">Opponent Side</p>
+        <div id="opponent-side">
+          <button id="pingA1" class="ping-pong" aria-pressed="false" role="switch"></button>
+          <button id="pingA2" class="ping-pong" aria-pressed="false" role="switch"></button>
+          <button id="pingA3" class="ping-pong" aria-pressed="false" role="switch"></button>
+        </div>
+
+        <div id="score-box">
+          <div id="score-buttons">
+            <button id="start-button" onclick="restart()">Restart</button>
+            <button id="start-button" onclick="submitanswer()">Enter</button>
+          </div>
+          <div id="score-container">
+            <p id="opponent-score" class="score-text">0</p>
+            <div id="score-border"></div>
+            <p id="player-score" class="score-text">0</p>
+          </div>
+        </div>
+
+        <div id="player-side">
+          <button id="pingB1" class="ping-pong" aria-pressed="false" role="switch" onclick="playero1()"></button>
+          <button id="pingB2" class="ping-pong" aria-pressed="false" role="switch" onclick="playero2()"></button>
+          <button id="pingB3" class="ping-pong" aria-pressed="false" role="switch" onclick="playero3()"></button>
+        </div>
+        <p class="side-text" id="player-header">Player Side</p>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

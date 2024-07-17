@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back-end Attempt</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script defer src="../scripts/script.js"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901,1,2&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="sl-popup">
+        <div id="left-signup">
+            <h1>Create Account</h1>
+            <p class="sl-description">Create an account to access all features! Enter your email, choose a unique
+                username, and set a strong
+                password. Verify your email, and you're ready to explore our exclusive content and tools.</p>
+            <form id="signup-form">
+                <input type="email" id="signup-email" class="email-address" placeholder="Email Address" required>
+                <input type="text" id="signup-username" class="username" placeholder="Username" required>
+                <input type="password" id="signup-password" class="password" placeholder="Password" required>
+                <input type="password" id="signup-vpassword" class="vpassword" placeholder="Verify Password" required>
+                <button type="submit" class="sl-button">Sign Up</button>
+            </form>
+        </div>
+        <div id="right-login">
+            <h1>Existing Account</h1>
+            <p class="sl-description">Welcome back! Enter your username and password to sign in. If you’ve forgotten
+                your password, use the
+                "Forgot Password" link to reset it. Enjoy full access to your account.</p>
+            <form id="login-form">
+                <input type="text" id="login-username" class="username" placeholder="Username" required>
+                <input type="password" id="login-password" class="password" placeholder="Password" required>
+                <button type="submit" class="sl-button">Log In</button>
+                <button id="reset-button" class="sl-button">Clear Storage</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

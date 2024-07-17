@@ -1,0 +1,273 @@
+html {
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0 0;
+  font-family: "Satoshi", sans-serif;
+}
+
+/*global positioning classes */
+.box-padding {
+  margin: 20px 40px;
+}
+
+/* button prologue */
+#welcome-screen {
+  height: 98svh;
+  width: 99svw;
+}
+
+#open-console-button {
+  border: dashed black 4px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100px;
+  animation: glow 2000ms infinite linear forwards;
+  cursor: pointer;
+  transition-duration: 200ms;
+  height: 100px;
+  width: 100px;
+  &:hover {
+    animation-play-state: paused;
+    background-color: black;
+    transition-duration: 500ms;
+  }
+}
+
+#move {
+  aspect-ratio: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+/*website content*/
+#page-wrapper {
+  position: relative;
+  visibility: hidden;
+  transition: opacity 1s;
+  width: 100%;
+  opacity: 0;
+}
+
+#heading-container {
+  position: fixed;
+  display: block;
+  width: 100%;
+  flex-direction: column;
+  padding: 0px 40px 0px 0px;
+  border-bottom: 0px solid red;
+  box-shadow: rgb(255, 255, 255) 0 10px 10px;
+  z-index: 10;
+}
+
+#welcome-content {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically if necessary */
+  padding: 300px 0;
+  padding-bottom: 0px;
+  text-align: center; /* Ensures text alignment for inner text */
+  width: 100%;
+}
+
+.text-container {
+  display: inline-flex; /* Makes the container fit the content */
+  flex-direction: column; /* Stacks title and subtitle vertically */
+  align-items: center; /* Centers children horizontally */
+  width: max-content; /* Ensures the container width is minimal to fit content */
+}
+
+#quick-cards-wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 300px;
+}
+
+#quick-cards-container-wrapper {
+  overflow: hidden; /* Hide overflowing cards */
+  width: calc(3 * 275px + 2 * 10px); /* Width to fit exactly 3 cards and gaps */
+}
+
+#quick-cards-container {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  align-items: center;
+  overflow-x: auto;
+  width: 100%;
+  height: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+
+.quick-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 275px;
+  height: 325px;
+  background-color: black;
+  border-radius: 10%;
+  scroll-snap-align: start;
+  transition: background-color 300ms ease-out;
+  cursor: pointer;
+  outline-style: none;
+}
+
+.quick-card:hover {
+  background-color: white;
+  border: 6px solid rgb(122, 122, 122);
+}
+
+.btn-scroll {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  font-weight: 900;
+  font-style: bold;
+  background-color: black;
+  border: none;
+  color: white;
+  position: relative;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+/*global text classes*/
+.uline {
+  text-decoration: underline 10px solid black;
+  text-underline-offset: 10px;
+}
+
+.page-heading {
+  margin: 0 0;
+  font-weight: 1000;
+  font-size: 60px;
+  position: relative;
+  background-color: white;
+  padding-left: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.page-subtitle {
+  margin: auto auto;
+  display: inline-flex;
+  font-weight: 800;
+  font-size: 20px;
+  /* font-style: italic; */
+  position: relative;
+  z-index: 1;
+  transform: translate(0px, -3px);
+}
+
+.welcome-title {
+  font-size: 80px;
+  font-weight: 1000;
+  margin: 0;
+}
+
+.welcome-subtitle {
+  font-size: 30px;
+  font-weight: 600;
+  font-style: italic;
+  text-align: right;
+  width: 100%; /* Ensures subtitle takes full width of container */
+}
+
+/*menu button and overlay*/
+#menu-button-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px 40px;
+  z-index: 2;
+  z-index: 10;
+}
+
+#menu-button {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background-color: black;
+  border: none;
+  transition-duration: 300ms;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    border: dashed 3px black;
+    transition-duration: 200ms;
+    animation: mb-glow 2000ms linear infinite;
+
+    &:active {
+      animation-play-state: paused;
+    }
+  }
+}
+.mb-minimize {
+  animation: subtleness 4000ms ease-in 1 forwards;
+  animation-delay: 1000ms;
+  transition-duration: 200ms;
+}
+/*animations*/
+@keyframes glow {
+  0% {
+    transform: rotate(180deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(270deg) scale(1.3);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes mb-glow {
+  0% {
+    transform: rotate(-180deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(-270deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(-360deg) scale(1);
+  }
+}
+
+@keyframes subtleness {
+  0%,
+  50% {
+    height: 100px;
+    width: 100px;
+  }
+
+  100% {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

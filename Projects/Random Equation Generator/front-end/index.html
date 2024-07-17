@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Math Problem Checker</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="../scripts/script.js">
+    </script>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901,1,2&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="workspace">
+        <div id="workarea">
+            <h1>Math Problems</h1>
+            <h3>Solve this equation and type your answer into the box below</h3>
+            <p id="randomized-problem"></p>
+            <input id="answerline" type="text" placeholder="Enter Answer">
+            <button id="submitanswer" type="submit" onclick="check(humananswer, sum)">Check Answer</button>
+            <button id="refresh" type="button" onclick="window.location.reload();">Reload Problem</button>
+        </div>
+    </div>
+</body>
+
+</html>

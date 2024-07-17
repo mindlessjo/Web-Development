@@ -1,0 +1,245 @@
+html,
+body {
+  margin: 0 0;
+  background-color: rgb(24, 24, 24);
+  user-select: none;
+  font-family: "General Sans", sans-serif;
+  transition-delay: 300ms;
+  transition-duration: 0ms;
+}
+
+#workspace {
+  display: block;
+  margin: auto auto;
+  height: fit-content;
+  width: fit-content;
+  margin-top: 2%;
+}
+
+#workarea {
+  width: 75%;
+  max-width: 1800px;
+  min-width: 1400px;
+  height: calc(750px + 5vh);
+  max-height: 1000px;
+  min-height: 750px;
+  background-color: rgb(36, 36, 36);
+  padding: 20px 20px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: auto auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.header-text {
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  margin: 20px 100px;
+  transition-duration: 500ms;
+  transition-delay: 100ms;
+  z-index: 3;
+  pointer-events: none;
+}
+
+#info-button {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 3%;
+  left: 2%;
+  border-radius: 100%;
+  border: none;
+
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  z-index: 2;
+
+  &:hover {
+    background-color: white;
+    transform: scale(125);
+    transition-delay: 100ms;
+    transition-duration: 500ms;
+  }
+}
+
+#info-button:hover + #header-text {
+  color: rgb(24, 24, 24);
+  z-index: 3;
+  transition-duration: 300ms;
+  transition-delay: 150ms;
+  font-size: 40px;
+}
+
+#info-button:hover ~ #info-text-container {
+  z-index: 5;
+  transition-delay: 200ms;
+  transition-duration: 500ms;
+  color: black;
+}
+
+#info-text-container {
+  position: absolute;
+  top: 42.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  z-index: 0;
+  transition-duration: 300ms;
+  pointer-events: none;
+}
+
+.info-text {
+  width: 700px;
+  text-align: center;
+  font-size: 35px;
+  line-height: 50px;
+}
+
+#ping-space {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(61, 61, 61);
+  height: 100%;
+  border-radius: 50px;
+  align-items: center;
+}
+
+#score-box {
+  position: absolute;
+  top: 35%;
+  left: 80%;
+  padding: 7px 10px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+}
+
+#score-buttons {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto;
+  gap: 10px;
+}
+
+#start-button {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  align-content: center;
+  color: black;
+  border: none;
+  padding: 7px 10px;
+  font-weight: 700;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: auto auto;
+  transition-duration: 300ms;
+
+  &:hover {
+    background-color: rgb(175, 175, 175);
+    transition-duration: 200ms;
+    transition-timing-function: ease-in;
+  }
+}
+
+#score-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.score-text {
+  position: relative;
+  color: white;
+  font-size: 70px;
+  font-weight: 700;
+  width: fit-content;
+  margin: auto auto;
+  text-align: center;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+}
+
+#score-border {
+  height: 1px;
+  width: auto;
+  border-bottom: 10px solid white;
+  border-radius: 30px;
+}
+
+.side-text {
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#opponent-header {
+  width: 100%;
+  text-align: left;
+  margin-left: 3%;
+}
+
+#opponent-side {
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+  height: 50%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  transition-duration: 400ms;
+  pointer-events: none;
+}
+
+#player-header {
+  width: 100%;
+  text-align: right;
+  margin-right: 3%;
+}
+
+#player-side {
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+  height: 50%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ping-pong {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  border: none;
+  background-color: white;
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+
+  &:hover {
+    background-color: white;
+    cursor: pointer;
+    transition-duration: 300ms;
+  }
+}
+
+#player-side .ping-pong[aria-pressed="true"] {
+  background-color: rgb(25, 255, 55);
+  transition-duration: 500ms;
+}
+
+#opponent-side .ping-pong[aria-pressed="true"] {
+  transition-duration: 500ms;
+}

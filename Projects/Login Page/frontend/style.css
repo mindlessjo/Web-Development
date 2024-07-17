@@ -1,0 +1,101 @@
+html,
+body {
+  margin: 0 0;
+  user-select: none;
+  font-family: "Satoshi", sans-serif;
+}
+
+html {
+  background-color: rgba(0, 0, 0, 0.687);
+}
+
+#sl-popup {
+  margin: 15vh auto;
+  height: 600px;
+  width: 1250px;
+  display: flex;
+  flex: 1;
+  padding: 50px 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+}
+
+#left-signup {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#right-login {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sl-description {
+  width: 75%;
+}
+
+#signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.email-address {
+  width: min-content;
+}
+
+#signup-email {
+}
+
+.username {
+  width: min-content;
+}
+
+#signup-username {
+}
+
+#login-username {
+}
+
+.password {
+  width: min-content;
+}
+
+#signup-password {
+}
+
+#login-password {
+}
+
+.vpassword {
+  width: min-content;
+}
+
+#signup-vpassword {
+}
+
+.fpassword {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.sl-button {
+  width: fit-content;
+  white-space: nowrap;
+  background-color: rgb(49, 204, 255);
+  border: none;
+  color: white;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-size: 1rem;
+}
