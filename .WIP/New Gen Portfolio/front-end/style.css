@@ -4,57 +4,27 @@
   font-family: "Satoshi", sans-serif;
 }
 
+/* ////////////// ID'S ////////////// */
+
 #box {
   position: relative;
   margin: 0 auto;
-  margin-top: 30vh;
+  margin-top: 10vh;
   width: 80vw;
+  max-width: 2560px;
   cursor: default;
   background-color: white;
 }
 
-#namespace {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-
-#idpicture {
-  border-radius: 100%;
-  background-color: rgb(83, 83, 83);
-  border: 5px solid rgb(49, 49, 49);
-  object-fit: cover;
+#workspace {
+  background-color: black;
+  height: 80vh;
 }
 
 /* ////////////// GLOBAL VALUES ////////////// */
 .header-1 {
-  font-size: 65px;
-  display: flex;
-  justify-content: center;
-  line-height: 50px;
-}
-
-.sub-header-1 {
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
 }
 
 .bold {
   font-weight: 1000;
-}
-
-.blue {
-  color: rgb(0, 195, 255);
-}
-
-.bg-pink {
-  background-color: rgb(255, 125, 186);
-}
-
-.rounder {
-  border-radius: 25px;
-  outline: none;
 }
