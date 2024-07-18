@@ -1,0 +1,40 @@
+/* * {
+  margin: 0 0;
+  padding: 0 0;
+} */
+
+#box {
+  position: relative;
+  outline: black solid 10px;
+  margin: 0 auto;
+  margin-top: 30vh;
+  width: 75vw;
+}
+
+#namespace {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#idpicture {
+  border-radius: 100%;
+  background-color: rgb(83, 83, 83);
+}
+
+/* ////////////// GLOBAL VALUES ////////////// */
+.header {
+  font-size: 50px;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.nameblue {
+  color: rgb(0, 195, 255);
+}
+
+.namepink {
+  color: rgb(255, 91, 154);
+}
