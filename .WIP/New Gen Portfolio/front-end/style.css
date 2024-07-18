@@ -31,20 +31,19 @@
   margin-top: 3%;
   width: 50%;
   height: auto;
-  transform: translateX(-100px);
+  transform: translateX(-5vw);
 }
 
 #project-container {
   display: flex;
   flex-direction: column;
+  width: fit-content;
   text-align: left;
-  width: 700px;
   margin: 20px 15px;
   margin-left: 0px;
   padding: 30px;
   padding-left: 0px;
   background-color: white;
-  /* border: 3px solid black; */
   border-radius: 20px;
 }
 
@@ -64,6 +63,14 @@
   flex-direction: column;
   width: 50%;
   height: auto;
+  justify-content: center;
+}
+
+#profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 150px;
 }
 
 /* ////////////// GLOBAL VALUES ////////////// */
@@ -78,15 +85,18 @@
 
 .project-title {
   text-align: left;
-  background-color: white;
   margin-left: 20px;
   padding: 0 5px;
 }
 
-.project-headers {
-  font-size: calc(3vw + 70px);
+.headers {
+  font-size: calc(3vw + 40px);
   line-height: calc(3vw + 40px);
   cursor: pointer;
   width: fit-content;
   white-space: nowrap;
+}
+
+.subtext {
+  font-size: calc(1vw + 5px);
 }
