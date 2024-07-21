@@ -1,0 +1,20 @@
+@media screen and (max-width: 1000px) {
+  /* ////////////// ID ////////////// */
+
+  #profile-container {
+    display: flex;
+    align-items: center;
+  }
+
+  #title-container {
+    white-space: wrap;
+    text-align: center;
+  }
+
+  #profile-info-container {
+    white-space: nowrap;
+    column-gap: 2vw;
+  }
+
+  /* ////////////// Class ////////////// */
+}
